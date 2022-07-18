@@ -1,0 +1,390 @@
+/*Animation*/
+@keyframes glow{
+    from{
+        box-shadow: 0 0 0.5px #ff4da6, 0 0 1px #ff4da6, 0 0 2px 
+        #ff4da6, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6;
+    }
+    to{
+        box-shadow: 0 0 6px #fff, 0 0 10px #ff4da6, 0 0 13px #ff4da6, 0 0 16px 
+        #ff4da6, 0 0 20px #ff4da6, 0 0 23px #ff4da6, 0 0 26px #ff4da6;
+    }
+}
+@keyframes rotating{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+
+    }
+}
+/*Basic*/
+body{
+    margin-top: 0%;
+    margin-left: 0%;
+    /**/
+    background: linear-gradient(90deg, rgba(18,17,17,1) 50%, rgba(4,4,4,1) 100%);
+    font-family: 'Overpass', sans-serif;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+.pageTitle{
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    right: 10px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+}
+.main{
+    float: left;
+    margin-left: 75px;
+}
+.main span{
+    color: rgb(2, 141, 255);
+    font-family: 'Pacifico', cursive;
+    opacity: 0.3;
+    font-size: 20px;
+    font-weight: bold;
+}
+.mainCodingDec1{
+    top: 10px;
+    left: 85px;
+    position: absolute;
+}
+.mainCodingDec2{
+    top: 30px;
+    left: 100px;
+    position: absolute;
+}
+.mainCodingDec3{
+    bottom: 30px;
+    left: 100px;
+    position: absolute;
+}
+.mainCodingDec4{
+    bottom: 10px;
+    left: 85px;
+    position: absolute;
+}
+.textCodingDec1{
+    float: left;
+}
+.textCodingDec2{
+    float: right;
+}
+.textCodingDec3{
+    float: left;
+}
+.textCodingDec4{
+    float: right;
+}
+/*initial display*/
+#homePage{
+    display: block;
+}
+#aboutPage{
+    display: none;
+}
+#skillsPage{
+    display: none;
+}
+#contactPage{
+    display: none;
+}
+#worksPage{
+    display: none;
+}
+#attributionsPage{
+    display: none;
+}
+#dicePage{
+    display: none;
+}
+/*navbar*/
+.navbar{
+    left: 0;
+    width: 75px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
+    position: fixed;
+    display: block;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+.navbar-tile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navbar-tile:hover{
+    background-color: black;
+}
+.navbar img{
+    padding: 15px;
+}
+/*home page*/
+#homePage .sector1{
+    display: flex;
+    width: 96%;
+    height: 90%;
+    position: absolute;
+}
+#homePage .logoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+    width: 50%;
+}
+#homePage .logo{
+    margin-top: 20%;
+    height: 50%;
+}
+#homePage .logoCodingDec1{
+    margin-top: 15%;
+}
+#homePage .logoCodingDec2{
+    margin-top: 70%;
+}
+#homePage .textDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+#homePage .textDiv div{
+    margin-top: 20%;
+    width: 60%;
+    padding: 10px;
+}
+#homePage .textDiv h1{
+    color: rgb(255, 47, 144);
+    font-size: 50px;
+    margin-left: 60px;
+    text-shadow: 2px 2px 2px rgb(250, 176, 210);
+}
+#homePage .textDiv p{
+    color: honeydew;
+    font-size: 40px;
+    margin-left: 60px;
+}
+/*about page*/
+#aboutPage .sector1{
+    display: flex;
+    width: 96%;
+    height: 90%;
+    position: absolute;
+}
+#aboutPage .div1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+#aboutPage .div1 div{
+    margin-top: 20%;
+    width: 60%;
+    padding: 10px;
+}
+#aboutPage .div1 p{
+    color: honeydew;
+    font-size: 40px;
+    margin-left: 60px;
+}
+#aboutPage .div2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+    width: 50%;
+}
+#aboutPage .div2 img{
+    margin-top: 20%;
+    height: 70%;
+}
+#aboutPage .imgCodingDec1{
+    margin-top: 15%;
+}
+#aboutPage .imgCodingDec2{
+    margin-top: 85%;
+}
+/*skills page*/
+#skillsPage .sector1{
+    display: flex;
+    width: 96%;
+    height: 90%;
+    position: absolute;
+}
+#skillsPage .div1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+    width: 50%;
+}
+#skillsPage .div1 img{
+    margin-top: 20%;
+    height: 60%;
+}
+#skillsPage .div2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+#skillsPage .div2 div{
+    margin-top: 20%;
+    width: 60%;
+    padding: 10px;
+}
+#skillsPage .div2 p{
+    color: honeydew;
+    font-size: 40px;
+    margin-left: 60px;
+}
+#skillsPage .imgCodingDec1{
+    margin-top: 15%;
+}
+#skillsPage .imgCodingDec2{
+    margin-top: 75%;
+}
+/*contact page*/
+#contactPage .sector1{
+    display: flex;
+    width: 96%;
+    height: 90%;
+    position: absolute;
+}
+#contactPage .div1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+.form-wrapper{
+    margin-top: 20%;
+    width: 70%;
+    height: 70%;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
+    border-radius: 50px;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+.form-wrapper h1{
+    color: rgb(255, 47, 144);
+    font-size: 40px;
+    text-shadow: 2px 2px 2px rgb(250, 176, 210);
+    text-align: center;
+}
+.formDiv1{
+    margin-top: 5%;
+}
+.form-wrapper label{
+    color: honeydew;
+    font-size: 25px;
+    padding: 7%;
+}
+.emailInput{
+    background: rgba(18,17,17,1);
+    width: 80%;
+    margin-left: 7%;
+    height: 40px;
+    color: white;
+}
+.formDiv2{
+    margin-top: 7%;
+}
+.commentInput{
+    background: rgba(18,17,17,1);
+    width: 80%;
+    margin-left: 7%;
+    height: 9vw;
+    color: white;
+}
+.sendDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sendDiv button{
+    margin-top: 4%;
+    height: 50px;
+    width: 120px;
+    font-size: 22px;
+    font-weight: bold;
+}
+#contactPage .div2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+    width: 50%;
+}
+#contactPage .div2 img{
+    margin-top: 20%;
+    height: 30%;
+}
+#contactPage .imgCodingDec1{
+    margin-top: 15%;
+}
+#contactPage.imgCodingDec2{
+    margin-top: 85%;
+}
+/*works page*/
+
+/*dice page*/
+#dicePage h1{
+    color: rgb(255, 47, 144);
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(250, 176, 210);
+}
+#dicePage p{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+}
+.diceDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.dice-tile{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    border-radius: 50px;
+    animation:glow 3s ease-in-out infinite alternate;
+}
+.dice-imgs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+}
+.dice-imgs img{
+    width: 50%;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+}
+.diceDiv button{
+    border-radius: 25px;
+    width: 25%;
+    height: 70px;
+    font-size: 30px;
+    color: rgb(22, 22, 22);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.diceDiv button:hover{
+    border: 2px solid rgb(255, 47, 144);
+}
+.button-wrap{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    float: left;
+}

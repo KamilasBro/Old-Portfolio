@@ -12,21 +12,176 @@
 @keyframes rotating{
     from{
         transform: rotateZ(0deg);
+        opacity: 0;
     }
     to
     {
         transform: rotate(360deg);
+        opacity: 1;
 
+    }
+}
+@keyframes roll1{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+@keyframes roll1up{
+    0%{
+        
+    }
+    50%{
+        margin-top: 0%;
+    }
+    100%{
+        margin-top: 25%;
+    }
+}
+@keyframes roll1down{
+    0%{
+        
+    }
+    50%{
+        margin-top: 25%;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+@keyframes roll1left{
+    from{
+
+    }
+    to{
+        margin-left: 5%;
+    }
+}
+@keyframes roll2{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes roll3{
+    0%{
+        color: red;
+    }
+    15%{
+        color: orange;
+    }
+    30%{
+        color: yellow;
+    }
+    45%{
+        color: green;
+    }
+    60%{
+        color: lightskyblue;
+    }
+    75%{
+        color: blue;
+    }
+    90%{
+        color: blueviolet;
+    }
+    100%{
+        color: red;
+    }
+}
+@keyframes roll3border{
+    0%{
+        box-shadow: 0 0 0.5px red, 0 0 1px red, 0 0 2px 
+        red, 0 0 3px red, 0 0 4px red, 0 0 5px red;
+    }
+    15%{
+        box-shadow: 0 0 0.5px orange, 0 0 1px orange, 0 0 2px 
+        orange, 0 0 3px orange, 0 0 4px orange, 0 0 5px orange;
+    }
+    30%{
+        box-shadow: 0 0 0.5px yellow, 0 0 1px yellow, 0 0 2px 
+        yellow, 0 0 3px yellow, 0 0 4px yellow, 0 0 5px yellow;
+    }
+    45%{
+        box-shadow: 0 0 0.5px green, 0 0 1px green, 0 0 2px 
+        green, 0 0 3px green, 0 0 4px green, 0 0 5px green;
+    }
+    60%{
+        box-shadow: 0 0 0.5px lightskyblue, 0 0 1px lightskyblue, 0 0 2px 
+        lightskyblue, 0 0 3px lightskyblue, 0 0 4px lightskyblue, 0 0 5px lightskyblue;
+    }
+    75%{
+        box-shadow: 0 0 0.5px blue, 0 0 1px blue, 0 0 2px 
+        blue, 0 0 3px blue, 0 0 4px blue, 0 0 5px blue;
+    }
+    90%{
+        box-shadow: 0 0 0.5px blueviolet, 0 0 1px blueviolet, 0 0 2px 
+        blueviolet, 0 0 3px blueviolet, 0 0 4px blueviolet, 0 0 5px blueviolet;
+    }
+    100%{
+        box-shadow: 0 0 0.5px red, 0 0 1px red, 0 0 2px 
+        red, 0 0 3px red, 0 0 4px red, 0 0 5px red;
+    }
+}
+@keyframes roll3boxshadow{
+    0%{
+        box-shadow: 0 0 0.5px red, 0 0 1px red, 0 0 2px 
+        red, 0 0 3px red, 0 0 4px red, 0 0 5px red;
+    }
+    15%{
+        box-shadow: 0 0 1.5px orange, 0 0 3px orange, 0 0 5px 
+        orange, 0 0 8px orange, 0 0 10px orange, 0 0 13px orange;
+    }
+    30%{
+        box-shadow: 0 0 3px yellow, 0 0 7px yellow, 0 0 9px 
+        red, 0 0 12px yellow, 0 0 14px yellow, 0 0 18px yellow;
+    }
+    45%{
+        box-shadow: 0 0 6px #fff, 0 0 10px green, 0 0 13px green, 0 0 16px 
+        green, 0 0 20px green, 0 0 23px green, 0 0 26px green;
+    }
+    60%{
+        box-shadow: 0 0 6px #fff, 0 0 10px lightskyblue, 0 0 13px lightskyblue, 0 0 16px 
+        lightskyblue, 0 0 20px lightskyblue, 0 0 23px lightskyblue, 0 0 26px lightskyblue;
+    }
+    75%{
+        box-shadow: 0 0 6px #fff, 0 0 10px blue, 0 0 13px blue, 0 0 16px 
+        blue, 0 0 20px blue, 0 0 23px blue, 0 0 26px blue;
+    }
+    90%{
+        box-shadow: 0 0 6px #fff, 0 0 10px blueviolet, 0 0 13px blueviolet, 0 0 16px 
+        blueviolet, 0 0 20px blueviolet, 0 0 23px blueviolet, 0 0 26px blueviolet;
+    }
+    100%{
+        box-shadow: 0 0 6px #fff, 0 0 10px red, 0 0 13px red, 0 0 16px 
+        red, 0 0 20px red, 0 0 23px red, 0 0 26px red;
+   
     }
 }
 /*Basic*/
 body{
     margin-top: 0%;
     margin-left: 0%;
-    /**/
     background: linear-gradient(90deg, rgba(18,17,17,1) 50%, rgba(4,4,4,1) 100%);
     font-family: 'Overpass', sans-serif;
     text-shadow: 2px 2px rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
+}
+body::-webkit-scrollbar-thumb{
+    background: rgba(18,17,17,1);
 }
 .pageTitle{
     font-family: 'Bebas Neue', cursive;
@@ -40,6 +195,7 @@ body{
 .main{
     float: left;
     margin-left: 75px;
+    
 }
 .main span{
     color: rgb(2, 141, 255);
@@ -110,7 +266,7 @@ body{
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
     position: fixed;
     display: block;
-    animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s infinite ease-in-out alternate;
 }
 .navbar-tile{
     display: flex;
@@ -140,6 +296,7 @@ body{
 #homePage .logo{
     margin-top: 20%;
     height: 50%;
+    
 }
 #homePage .logoCodingDec1{
     margin-top: 15%;
@@ -162,7 +319,8 @@ body{
     color: rgb(255, 47, 144);
     font-size: 50px;
     margin-left: 60px;
-    text-shadow: 2px 2px 2px rgb(250, 176, 210);
+    text-shadow: 1px 1px 1px rgb(250, 176, 210);
+    
 }
 #homePage .textDiv p{
     color: honeydew;
@@ -264,16 +422,17 @@ body{
 }
 .form-wrapper{
     margin-top: 20%;
-    width: 70%;
-    height: 70%;
+    width: 600px;
+    height: 600px;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
     border-radius: 50px;
-    animation: glow 3s ease-in-out infinite alternate;
+    box-shadow: 0 0 0.5px #ff4da6, 0 0 1px #ff4da6, 0 0 2px 
+        #ff4da6, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6;
 }
 .form-wrapper h1{
     color: rgb(255, 47, 144);
     font-size: 40px;
-    text-shadow: 2px 2px 2px rgb(250, 176, 210);
+    text-shadow: 1px 1px 1px rgb(250, 176, 210);
     text-align: center;
 }
 .formDiv1{
@@ -290,6 +449,7 @@ body{
     margin-left: 7%;
     height: 40px;
     color: white;
+    font-size: 20px;
 }
 .formDiv2{
     margin-top: 7%;
@@ -300,6 +460,16 @@ body{
     margin-left: 7%;
     height: 9vw;
     color: white;
+    font-size: 15px;
+}
+.commentInput::-webkit-scrollbar{
+    width: 10px;
+}
+.commentInput::-webkit-scrollbar-track{
+    background: rgba(18,17,17,1);
+}
+.commentInput::-webkit-scrollbar-thumb{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
 }
 .sendDiv{
     display: flex;
@@ -312,6 +482,13 @@ body{
     width: 120px;
     font-size: 22px;
     font-weight: bold;
+    border-radius: 25px;
+    background-color: white;
+}
+.sendDiv button:hover{
+    border: 2px solid rgb(255, 47, 144);
+    box-shadow: 0 0 0.5px #ff4da6, 0 0 1px #ff4da6, 0 0 2px 
+        #ff4da6, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6;
 }
 #contactPage .div2{
     display: flex;
@@ -321,28 +498,109 @@ body{
     width: 50%;
 }
 #contactPage .div2 img{
-    margin-top: 20%;
+    margin-top: 30%;
     height: 30%;
+    padding: 30px;
+    filter: brightness(130%);
+}
+#contactPage .div2 img:hover{
+    height: 40%;
 }
 #contactPage .imgCodingDec1{
     margin-top: 15%;
 }
-#contactPage.imgCodingDec2{
+#contactPage .imgCodingDec2{
     margin-top: 85%;
 }
+#contactPage .imgCodingDec3{
+    margin-top: 25%;
+}
+#contactPage .imgCodingDec4{
+    margin-top: 70%;
+}
 /*works page*/
-
+.worksDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+    margin-top: 1%;
+    
+}
+.worksDiv div{
+    padding: 20px;
+}
+.worksDiv h1{
+    color: white;
+    text-align: center;
+}
+.worksDiv img{
+    height: 325px;
+    width: 577.77px;
+}
+.worksDiv img:hover{
+    box-shadow: 0 0 0.5px #ff4da6, 0 0 1px #ff4da6, 0 0 2px 
+        #ff4da6, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6;
+}
+#worksPage .mainCodingDec1{
+    position: fixed;
+}
+#worksPage .mainCodingDec2{
+    position: fixed;
+}
+#worksPage .mainCodingDec3{
+    position: fixed;
+    bottom: 30px;
+}
+#worksPage .mainCodingDec4{
+    position: fixed;
+    bottom: 10px;
+}
+/*attribution page*/
+#attributionsPage .sector1{
+    display: flex;
+    width: 96%;
+    height: 90%;
+    position: absolute;
+}
+#attributionsPage ul{
+    list-style-type: none;
+    color: rgb(255, 47, 144);
+    font-size: 35px;
+    text-shadow: 1px 1px 1px rgb(250, 176, 210);
+}
+#attributionsPage .div1{
+    margin-top: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+#attributionsPage .div2{
+    margin-top: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+#attributionsPage img{
+    width: 80px;
+    height: 80px;
+}
 /*dice page*/
 #dicePage h1{
     color: rgb(255, 47, 144);
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
-    text-shadow: 2px 2px 2px rgb(250, 176, 210);
+    text-shadow: 1px 1px 1px rgb(250, 176, 210);
 }
 #dicePage p{
     color: rgb(255, 255, 255);
     font-size: 40px;
     text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .diceDiv{
     display: flex;
@@ -355,7 +613,8 @@ body{
     height: 600px;
     position: absolute;
     border-radius: 50px;
-    animation:glow 3s ease-in-out infinite alternate;
+    box-shadow: 0 0 0.5px #ff4da6, 0 0 1px #ff4da6, 0 0 2px 
+        #ff4da6, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6;
 }
 .dice-imgs{
     width: 100%;
@@ -376,9 +635,13 @@ body{
     font-size: 30px;
     color: rgb(22, 22, 22);
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .diceDiv button:hover{
     border: 2px solid rgb(255, 47, 144);
+    box-shadow: 0 0 0.5px #ff4da6, 0 0 1px #ff4da6, 0 0 2px 
+        #ff4da6, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6;
 }
 .button-wrap{
     margin-top: 5%;
@@ -387,4 +650,56 @@ body{
     justify-content: center;
     width: 100%;
     float: left;
+}
+/* roll5 */
+#clue2{
+    position: absolute;
+    color: #fff;
+    margin-top: 20%;
+    font-size: 25px;
+    color: rgb(20, 20, 20);
+    display: none;
+}
+#clue3{
+    display: none;
+}
+/* secret room */
+.afterCodeRoom{
+    display: none;
+}
+#wrongCode{
+    display: none;
+    color: white;
+    text-shadow: 2px 2px 2px black(250, 176, 210);
+    font-size: 120px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+.secretRoom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; 
+}
+.secretRoom input{
+    margin-top: 10%;
+    width: 35%;
+    height: 300px;
+    font-size: 170px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
+    color: white;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+.secretRoom button{
+    margin-top: 2%;
+    width: 30%;
+    height: 200px;
+    font-size: 100px;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', cursive;
+}
+.secretRoom button:hover{
+    border: 2px solid #ff4da6;
 }

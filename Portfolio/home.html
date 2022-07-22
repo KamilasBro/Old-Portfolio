@@ -17,16 +17,16 @@
         <h1>Before we continue</h1>
         <p>Please roll a dice</p>
         <div class="diceDiv">
-            <div class="dice-tile">
+            <div class="dice-tile" id="siema">
                 <p>The website will change based on roll result</p>
                 <div class="dice-imgs" id="dice-imgs">
                     
                 </div>
-                <div class="button-wrap" id="button-wrap"><button id="rollButton">ROLL !</button></div>
+                <div class="button-wrap" id="button-wrap"><button id="rollButton">ROLL !</button><button id="skip">SKIP</button></div>
             </div>
         </div>
     </div>
-    <div class="main">
+    <div class="main" id="main">
         <!--home page-->
         <div id="homePage">
             <div class="pageTitle" id="pageTitle">HOME</div>
@@ -35,7 +35,7 @@
             <div class="sector1">
                 <div class="logoDiv">
                     <span class="logoCodingDec1">< img></span>
-                    <img class="logo" src="Images/placeholder.png" alt="LogoImage">
+                    <img class="logo" src="Images/placeholder.png" alt="LogoImage" id="logo">
                     <span class="logoCodingDec2">< /img></span>
                 </div>
                 <div class="textDiv">
@@ -73,8 +73,9 @@
                 </div>
                 <div class="div2">
                     <span class="imgCodingDec1">< img></span>
-                    <img src="Images/aboutImg.png" alt="">
+                    <img id="aboutPageImg" src="Images/aboutImg.png" alt="">
                     <span class="imgCodingDec2">< /img></span>
+                    <div id="clue2">3</div>
                 </div>
             </div>
             <span class="mainCodingDec3">< /body></span>
@@ -88,7 +89,7 @@
             <div class="sector1">
                 <div class="div1">
                     <span class="imgCodingDec1">< img></span>
-                    <img src="Images/codingLangImg.png" alt="">
+                    <img src="Images/codingLangImg.png" alt="" id="skillsImg">
                     <span class="imgCodingDec2">< /img></span>
                 </div>
                 <div class="div2">
@@ -113,25 +114,36 @@
             <span class="mainCodingDec2">< body></span>
             <div class="sector1">
                 <div class="div1">
+                    <span class="imgCodingDec1">< form></span>
                     <div class="form-wrapper">
                         <h1>Send Me Mail!</h1>
-                        <form action="https://formsubmit.co/kamilwrobel4321@gmail.com" method="post">
+                        <form action="https://formsubmit.co/761bf3ecce969402ac00ea3e1ed80978" method="post">
+                            <!--antispam/honeypot-->
+                            <input type="text" name="_honey" style="display: none;">
+
+                            <!--Disable Captcha-->
+                            <input type="hidden" name="_captcha" value="false">
+
                             <div class="formDiv1">
                                 <label for="email">E-mail</label>
-                                <input type="text" class="emailInput" id="email" required>
+                                <input type="text" class="emailInput" name="email" id="email" required>
                             </div>
                             <div class="formDiv2">
                                 <label for="email">Comment</label>
-                                <textarea type="text" class="commentInput" id="comment"  rows="4" required></textarea>
+                                <textarea type="text" class="commentInput" name="comment" id="comment"  rows="4" required></textarea>
                             </div>
                             <div class="sendDiv">
                                 <button type="submit" id="submit">Submit</button>
                             </div>
                         </form>
                     </div>
+                    <span class="imgCodingDec2">< /form></span>
                 </div>
                 <div class="div2">
-                    
+                    <span class="imgCodingDec3">< img></span>
+                    <img src="Images/linkedin.png" alt="" id="linkedinButton">
+                    <img src="Images/github.png" alt="" id="githubButton">
+                    <span class="imgCodingDec4">< /img></span>
                 </div>
             </div>
             <span class="mainCodingDec3">< /body></span>
@@ -142,7 +154,56 @@
             <div class="pageTitle" id="pageTitle">WORKS</div>
             <span class="mainCodingDec1">< html></span>
             <span class="mainCodingDec2">< body></span>
-
+                <div class="worksDiv">
+                    <div class="work1">
+                        <h1>Diablo II Resurrected Calculator Demo</h1>
+                        <img src="Images/d2calc.jpg" alt="" id="d2calc">
+                    </div>
+                    <div class="work2">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                </div>
+                <div class="worksDiv">
+                    <div class="work3">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                    <div class="work4">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                </div>
+                <div class="worksDiv">
+                    <div class="work5">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                    <div class="work6">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                </div>
+                <div class="worksDiv">
+                    <div class="work7">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                    <div class="work8">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                </div>
+                <div class="worksDiv">
+                    <div class="work9">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                    <div class="work10">
+                        <h1>Coming Soon</h1>
+                        <img src="Images/placeholder.png" alt="">
+                    </div>
+                </div>
             <span class="mainCodingDec3">< /body></span>
             <span class="mainCodingDec4">< /html></span>
         </div>
@@ -151,7 +212,78 @@
             <div class="pageTitle" id="pageTitle">ATTRIBUTIONS</div>
             <span class="mainCodingDec1">< html></span>
             <span class="mainCodingDec2">< body></span>
+            <div class="sector1">
+                <div class="div1" id="attributionsPageImg1">
+                    <div>
+                        <span class="textCodingDec3" id="textDecAP1">< ul></span>
+                        <ul class="ul1">
+                            <li>
+                                <img src="Images/home.png" alt=""> By Dave Gandy
+                            </li>
+                            <li>
+                                <img src="Images/about.png" alt=""> By Freepik
+                            </li>
+                            <li>
+                                <img src="Images/skills.png" alt=""> By Freepik
+                            </li>
+                            <li>
+                                <img src="Images/contact.png" alt=""> By Freepik
+                            </li>
+                        </ul>
+                        <span class="textCodingDec4" id="textDecAP2">< /ul></span>
+                    </div>
+                    <div>
+                        <span class="textCodingDec3" id="textDecAP3">< ul></span>
+                        <ul class="ul2">
+                            <li>
+                                <img src="Images/works.png" alt=""> By Freepik
+                            </li>
+                            <li>
+                                <img src="Images/attributions.png" alt=""> By yut1655
+                            </li>
+                            <li>
+                                <img src="Images/aboutImg.png" alt=""> By max.icons
+                            </li>
+                            <li>
+                                <img src="Images/cpp.png" alt=""> By Freepik
+                            </li>
+                        </ul>
+                        <span class="textCodingDec4" id="textDecAP4">< /ul></span>
+                    </div>
+                </div>
+                <div class="div2" id="attributionsPageImg2">
+                    <div>
+                        <span class="textCodingDec3" id="textDecAP5">< ul></span>
+                        <ul class="ul3">
+                            <li>
+                                <img src="Images/html.png" alt=""> By Freepik
+                            </li>
+                            <li>
+                                <img src="Images/css.png" alt=""> By Pixel perfect
+                            </li>
+                            <li>
+                                <img src="Images/js.png" alt=""> By Freepik
+                            </li>
+                            <li>
+                                <img src="Images/linkedin.png" alt=""> By Freepik
+                            </li>
+                        </ul>
+                        <span class="textCodingDec4" id="textDecAP6">< /ul></span>
+                    </div>
+                    <div>
+                        <span class="textCodingDec3" id="textDecAP7">< ul></span>
+                        <ul class="ul4" id="ul4">
+                            <li>
+                                <img src="Images/github.png" alt=""> By Pixel perfect
+                            </li>
+                        </ul>
+                        <ul id="ul5">
 
+                        </ul>
+                        <span class="textCodingDec4" id="textDecAP8">< /ul></span>
+                    </div>
+                </div>
+            </div>
             <span class="mainCodingDec3">< /body></span>
             <span class="mainCodingDec4">< /html></span>
         </div>
@@ -177,6 +309,7 @@
                 <img src="Images/attributions.png" alt="attributions">
             </div>
         </div>
+        <div id="clue3">4</div>
     </div>
     <script src="script.js"></script>
 </body>

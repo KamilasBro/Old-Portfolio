@@ -70,6 +70,14 @@
         opacity: 0;
     }
 }
+@keyframes kurwaJebanaKostka{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 @keyframes roll3{
     0%{
         color: red;
@@ -165,6 +173,51 @@
    
     }
 }
+@keyframes loading{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/*Loading screen*/
+.loadingContainer{
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+}
+.loadingText{
+    color: rgb(255, 47, 144);
+    margin-bottom: 25px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px rgb(250, 176, 210);
+}
+.loading{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading .line-box{
+    padding: 2px;
+    width: 40%;
+    height: 30px;
+    border: 2px solid rgb(255, 47, 144);
+    border-radius: 20px;
+}
+.loading .line-box .line{
+    height: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+    animation: loading 1s forwards cubic-bezier(0,0,0,0);
+}
 /*Basic*/
 body{
     margin-top: 0%;
@@ -195,7 +248,7 @@ body::-webkit-scrollbar-thumb{
 .main{
     float: left;
     margin-left: 75px;
-    
+    display: none;
 }
 .main span{
     color: rgb(2, 141, 255);
@@ -217,12 +270,12 @@ body::-webkit-scrollbar-thumb{
 .mainCodingDec3{
     bottom: 30px;
     left: 100px;
-    position: absolute;
+    position: fixed;
 }
 .mainCodingDec4{
     bottom: 10px;
     left: 85px;
-    position: absolute;
+    position: fixed;
 }
 .textCodingDec1{
     float: left;
@@ -265,13 +318,14 @@ body::-webkit-scrollbar-thumb{
     height: 100%;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 100%);
     position: fixed;
-    display: block;
     animation: glow 3s infinite ease-in-out alternate;
+    display: none;
 }
 .navbar-tile{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 75px;
 }
 .navbar-tile:hover{
     background-color: black;
@@ -295,8 +349,12 @@ body::-webkit-scrollbar-thumb{
 }
 #homePage .logo{
     margin-top: 20%;
-    height: 50%;
-    
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+}
+#homePage .logo:hover{
+    animation: glow 3s infinite ease-in-out alternate;
 }
 #homePage .logoCodingDec1{
     margin-top: 15%;
@@ -323,7 +381,7 @@ body::-webkit-scrollbar-thumb{
     
 }
 #homePage .textDiv p{
-    color: honeydew;
+    color: white;
     font-size: 40px;
     margin-left: 60px;
 }
@@ -346,7 +404,7 @@ body::-webkit-scrollbar-thumb{
     padding: 10px;
 }
 #aboutPage .div1 p{
-    color: honeydew;
+    color: white;
     font-size: 40px;
     margin-left: 60px;
 }
@@ -359,13 +417,8 @@ body::-webkit-scrollbar-thumb{
 }
 #aboutPage .div2 img{
     margin-top: 20%;
-    height: 70%;
-}
-#aboutPage .imgCodingDec1{
-    margin-top: 15%;
-}
-#aboutPage .imgCodingDec2{
-    margin-top: 85%;
+    height: 512px;
+    width: 512px;
 }
 /*skills page*/
 #skillsPage .sector1{
@@ -383,7 +436,8 @@ body::-webkit-scrollbar-thumb{
 }
 #skillsPage .div1 img{
     margin-top: 20%;
-    height: 60%;
+    height: 450px;
+    width: 450px;
 }
 #skillsPage .div2{
     display: flex;
@@ -397,15 +451,9 @@ body::-webkit-scrollbar-thumb{
     padding: 10px;
 }
 #skillsPage .div2 p{
-    color: honeydew;
+    color: white;
     font-size: 40px;
     margin-left: 60px;
-}
-#skillsPage .imgCodingDec1{
-    margin-top: 15%;
-}
-#skillsPage .imgCodingDec2{
-    margin-top: 75%;
 }
 /*contact page*/
 #contactPage .sector1{
@@ -439,7 +487,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 5%;
 }
 .form-wrapper label{
-    color: honeydew;
+    color: white;
     font-size: 25px;
     padding: 7%;
 }
@@ -499,24 +547,14 @@ body::-webkit-scrollbar-thumb{
 }
 #contactPage .div2 img{
     margin-top: 30%;
-    height: 30%;
+    height: 275px;
+    width: 275px;
     padding: 30px;
     filter: brightness(130%);
 }
 #contactPage .div2 img:hover{
-    height: 40%;
-}
-#contactPage .imgCodingDec1{
-    margin-top: 15%;
-}
-#contactPage .imgCodingDec2{
-    margin-top: 85%;
-}
-#contactPage .imgCodingDec3{
-    margin-top: 25%;
-}
-#contactPage .imgCodingDec4{
-    margin-top: 70%;
+    height: 325px;
+    width: 325px;
 }
 /*works page*/
 .worksDiv{
@@ -575,14 +613,14 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 50%;
+    width: 100%;
 }
 #attributionsPage .div2{
     margin-top: 12%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 50%;
+    width: 100%;
 }
 #attributionsPage img{
     width: 80px;
@@ -664,8 +702,25 @@ body::-webkit-scrollbar-thumb{
     display: none;
 }
 /* secret room */
-.afterCodeRoom{
+#afterCodeRoom{
     display: none;
+    flex-direction: row;
+    justify-content: center;
+    overflow: none;
+}
+#zul{
+    margin-top: 1vh;
+    width: 99vw;
+    height: 98vh;
+    border: none;
+
+}
+.tf{
+    opacity: 0.3;
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    animation: tfanim 3s infinite ease-in-out alternate;
 }
 #wrongCode{
     display: none;
@@ -702,4 +757,796 @@ body::-webkit-scrollbar-thumb{
 }
 .secretRoom button:hover{
     border: 2px solid #ff4da6;
+}
+/* media queries */
+@media (max-width: 1600px){
+/*attribution page*/
+#attributionsPage .sector1{
+    display: block;
+    width: 96%;
+    height: 90%;
+    position: absolute;
+}
+#attributionsPage ul{
+    font-size: 35px;
+}
+#attributionsPage .div1{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+#attributionsPage .div2{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+#attributionsPage img{
+    width: 80px;
+    height: 80px;
+}
+}
+@media (max-width: 1440px){
+    /*aboutpage*/
+    #aboutPage .div1 p{
+        font-size: 30px;
+    }
+    /*skillspage*/
+    #skillsPage .div2 p{
+        font-size: 35px;
+    }
+    /*contactpage*/
+    .form-wrapper{
+        width: 500px;
+        height: 500px;
+    }
+    .form-wrapper h1{
+        font-size: 35px;
+    }
+    #contactPage .div2 img{
+        height: 250px;
+        width: 250px;
+    }
+    #contactPage .div2 img:hover{
+        height: 300px;
+        width: 300px;
+    }
+    /*works page*/
+    .worksDiv h1{
+        font-size: 25px;
+    }
+    .worksDiv img{
+        width: 468px;
+        height: 238px;
+    }   
+}
+@media (max-width: 1366px){
+    
+}
+@media (max-width: 1280px){
+    .main{
+        margin-top: 75px;
+        margin-left: 0px;
+    }
+    .mainCodingDec1{
+        top: 80px;
+        left: 5px;
+    }
+    .mainCodingDec2{
+        top: 100px;
+        left: 20px;
+    }
+    .mainCodingDec3{
+        bottom: 30px;
+        left: 20px;
+    }
+    .mainCodingDec4{
+        bottom: 10px;
+        left: 5px;
+    }
+    /*navbar*/
+    .navbar{
+        width: 100%;
+        height: 75px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .navbar-tile{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 75px;
+        width: 75px;
+        float: left;
+    }
+    .navbar img{
+        padding: 15px;
+    }
+    /*homepage*/
+    #homePage .sector1{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #homePage .logoDiv{
+        margin-top: 5%;
+        float: left;
+        width: 100%;
+        height: initial;
+    }
+    #homePage .logo{
+        margin-top: 5%;
+        height: 400px;
+        width: 400px;
+    }
+    #homePage .textDiv{
+        width: 100%;
+        height: 70%;
+    }
+    #homePage .textDiv div{
+        margin-top: 10%;
+    }
+    /*aboutpage*/
+    #aboutPage .sector1{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #aboutPage .div1{
+        width: 100%;
+        height: initial;
+    }
+    #aboutPage .div1 div{
+        margin-top: 10%;
+        width: 60%;
+        padding: 10px;
+    }
+    #aboutPage .div1 p{
+        font-size: 35px;
+    }
+    #aboutPage .div2{
+        margin-top: 5%;
+        float: left;
+        width: 100%;
+        height: initial;
+    }
+    #aboutPage .div2 img{
+        margin-top: 0%;
+        height: 400px;
+        width: 400px;
+    }
+    /*skillspage*/
+    #skillsPage .sector1{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #skillsPage .div1{
+        margin-top: 5%;
+        float: left;
+        width: 100%;
+        height: initial;
+    }
+    #skillsPage .div1 img{
+        margin-top: 0%;
+        height: 60%;
+    }
+    #skillsPage .div2{
+        width: 100%;
+        height: 70%;
+    }
+    #skillsPage .div2 div{
+        margin-top: 10%;
+        width: 60%;
+        padding: 10px;
+    }
+    /*contact page*/
+    #contactPage .sector1{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #contactPage .div1{
+        margin-top: 5%;
+        float: left;
+        width: 100%;
+        height: initial;
+    }
+    .form-wrapper{
+        margin-top: 5%;
+        width: 600px;
+        height: 600px;
+    }
+    .formDiv2{
+        margin-top: 7%;
+    }
+    .sendDiv button{
+        margin-top: 10%;
+    }
+    #contactPage .div2{
+        width: 100%;
+        height: 70%;
+    }
+    #contactPage .div2 img{
+        margin-top: 10%;
+    }
+    /*works page*/
+    .worksDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        float: left;
+        margin-top: 1%; 
+    }
+    .worksDiv h1{
+        font-size: 20px;
+    }
+    .worksDiv img{
+        width: 407px;
+        height: 198px;
+    }  
+    /*attribution page*/
+    #attributionsPage .sector1{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #attributionsPage .div1{
+        margin-top: 10%;
+
+    }
+    #attributionsPage .div2{
+        margin-top: 5%;
+
+    }
+    /*Loading screen*/
+    .loadingText{
+        font-size: 20px;
+    }
+    /* secret room */
+    #wrongCode{
+        font-size: 90px;
+    }
+    .secretRoom input{
+        width: 50%;
+        height: 300px;
+        font-size: 150px;
+    }
+    .secretRoom button{
+        width: 40%;
+        height: 200px;
+        font-size: 100px;
+    } 
+}
+@media (max-width: 1176px){
+    
+}
+@media (max-width: 1024px){
+    /*works page*/
+    .worksDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        margin-top: 1%;
+    }
+    .worksDiv h1{
+        font-size: 30px;
+    }
+    .worksDiv img{
+        height: 325px;
+        width: 577.77px;
+    }
+    /*Loading screen*/
+    .loadingText{
+        font-size: 18px;
+    }
+    /* secret room */
+    #wrongCode{
+        font-size: 70px;
+    }
+    .secretRoom input{
+        width: 100%;
+        height: 300px;
+        font-size: 150px;
+    }
+    .secretRoom button{
+        width: 70%;
+        height: 200px;
+        font-size: 100px;
+    }
+    /*Loading screen*/
+    .loading .line-box{
+        width: 60%;
+    }
+}
+@media (max-width: 800px){
+
+}
+
+@media (max-width: 768px){
+    .pageTitle{
+        position: absolute;
+    }
+    /*homepage*/
+    #homePage .logo{
+        margin-top: 15%;
+    }
+    #homePage .textDiv h1{
+        padding-top: 10px;
+        font-size: 45px;
+        margin-left: 30px;
+    }
+    #homePage .textDiv p{
+        padding-top: 10px;
+        font-size: 35px;
+        margin-left: 30px;
+    }
+    /*aboutpage*/
+    #aboutPage .div1 p{
+        padding-top: 10px;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    /*skillspage*/
+    #skillsPage .div1{
+        margin-top: 15%;
+        float: left;
+        width: 100%;
+        height: initial;
+    }
+    #skillsPage .div2 p{
+        padding-top: 10px;
+        font-size: 35px;
+        margin-left: 30px;
+    }
+    #skillsPage .div1 img{
+        height: 450px;
+        width: 450px;
+    }
+    /*contact page*/
+    #contactPage .sector1{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #contactPage .div1{
+        margin-top: 5%;
+        float: left;
+        width: 100%;
+        height: initial;
+    }
+    .form-wrapper{
+        margin-top: 10%;
+        width: 500px;
+        height: 500px;
+    }
+    .formDiv2{
+        margin-top: 7%;
+    }
+    .sendDiv button{
+        margin-top: 10%;
+    }
+    #contactPage .div2{
+        width: 100%;
+        height: 70%;
+    }
+    #contactPage .div2 img{
+        margin-top: 10%;
+        height: 250px;
+        width: 250px;
+    }
+    #contactPage .div2 img:hover{
+        height: 275px;
+        width: 275px;
+    }
+    /*works page*/
+    .worksDiv h1{
+        font-size: 22px;
+    }
+    .worksDiv img{
+        width: 407px;
+        height: 198px;
+    } 
+    .work1{
+        margin-top: 10%;
+    }
+    /*attribution page*/
+    #attributionsPage .sector1{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    #attributionsPage ul{
+        font-size: 35px;
+    }
+    #attributionsPage .div1{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage .div2{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage img{
+        width: 80px;
+        height: 80px;
+    }
+    /*Loading screen*/
+    .loadingText{
+        font-size: 12px;
+    }
+    .loading .line-box{
+        padding: 2px;
+        width: 70%;
+        height: 30px;
+        border: 2px solid rgb(255, 47, 144);
+        border-radius: 20px;
+    }
+}
+@media (max-width: 625px){
+    .mainCodingDec1{
+        display: none;
+    }
+    .mainCodingDec2{
+        display: none;
+    }
+    .mainCodingDec3{
+        display: none;
+    }
+    .mainCodingDec4{
+        display: none;
+    }
+    /*contactpage*/
+    .form-wrapper{
+        margin-top: 10%;
+        width: 400px;
+        height: 400px;
+    }
+    #contactPage .div2 img{
+        margin-top: 10%;
+        height: 150px;
+        width: 150px;
+    }
+    #contactPage .div2 img:hover{
+        height: 175px;
+        width: 175px;
+    }
+    /*attribution page*/
+    #attributionsPage ul{
+        padding: 10px;
+        font-size: 25px;
+    }
+    #attributionsPage .div1{
+        margin-top: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage .div2{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage img{
+        width: 60px;
+        height: 60px;
+    }
+    /* secret room */
+    #wrongCode{
+        font-size: 50px;
+    }
+    .secretRoom input{
+        width: 100%;
+        height: 300px;
+        font-size: 140px;
+    }
+    .secretRoom button{
+        width: 100%;
+        height: 200px;
+        font-size: 90px;
+    }     
+    /*dice page*/
+    #dicePage h1{
+        font-size: 40px;
+    }
+    #dicePage p{
+        font-size: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .dice-tile{
+        width: 410px;
+        height: 410px;
+    }
+    .dice-imgs img{
+        width: 45%;
+    }
+    .diceDiv button{
+        width: 20%;
+        height: 60px;
+        font-size: 20px;
+    }
+    /*Loading screen*/
+    .loadingText{
+        font-size: 10px;
+    }      
+}
+@media (max-width: 450px){
+    .main span{
+        font-size: 15px;
+    }
+    .pageTitle{
+        right: 0;
+        left: 0;
+        padding-top: 20px;
+        text-align: center;
+        position: none;
+    }
+    /*navbar*/
+    .navbar-tile{
+        width: 50px;
+        margin-inline: 5px;
+    }
+    /*homepage*/
+    #homePage .logo{
+        margin-top: 15%;
+        height: 300px;
+        width: 300px;
+    }
+    #homePage .textDiv h1{
+        padding-top: 10px;
+        font-size: 40px;
+        margin-left: 30px;
+    }
+    #homePage .textDiv p{
+        font-size: 30px;
+    }
+    /*aboutpage*/
+    #aboutPage .div1 p{
+        font-size: 25px;
+
+    }
+    #aboutPage .div2{
+        margin-top: 0%;
+        float: left;
+        width: 100%;
+        height: initial;
+    }
+    #aboutPage .div2 img{
+        margin-top: 0%;
+        height: 300px;
+        width: 300px;
+    }
+    /*skillspage*/
+    #skillsPage .div2 p{
+        font-size: 25px;
+    }
+    #skillsPage .div1 img{
+        height: 300px;
+        width: 300px;
+    }
+    /*contactpage*/
+    .form-wrapper{
+        margin-top: 15%;
+        width: 375px;
+        height: 400px;
+    }
+    #contactPage .div2 img{
+        margin-top: 10%;
+        height: 120px;
+        width: 120px;
+    }
+    #contactPage .div2 img:hover{
+        height: 150px;
+        width: 150px;
+    }
+    /*works page*/
+    .worksDiv h1{
+        font-size: 19px;
+    }
+    .worksDiv img{
+        width: 320px;
+        height: 173px;
+    }
+    /*attribution page*/
+    #attributionsPage ul{
+        padding: 10px;
+        font-size: 20px;
+    }
+    #attributionsPage .div1{
+        margin-top: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage .div2{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage img{
+        width: 50px;
+        height: 50px;
+    }
+    /*dice page*/
+    #dicePage h1{
+        font-size: 30px;
+    }
+    #dicePage p{
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .dice-tile{
+        width: 350px;
+        height: 350px;
+    }
+    .dice-imgs img{
+        width: 45%;
+    }
+    .diceDiv button{
+        width: 20%;
+        height: 50px;
+        font-size: 15px;
+    }
+    /* secret room */
+    #wrongCode{
+        font-size: 40px;
+    }
+    .secretRoom input{
+        width: 100%;
+        height: 300px;
+        font-size: 100px;
+    }
+    .secretRoom button{
+        width: 100%;
+        height: 200px;
+        font-size: 80px;
+    } 
+}
+@media (max-width: 375px){
+    /*navbar*/
+    .navbar-tile{
+        width: 50px;
+        margin-inline: 0px;
+    }
+    .navbar img{
+        padding: 15px;
+        height: 40px;
+        width: 40px;
+    }   
+    /*homepage*/
+    #homePage .textDiv h1{
+        font-size: 30px;
+    }
+    #homePage .textDiv p{
+        font-size: 20px;
+    }
+    /*homepage*/
+    #aboutPage .div1 p{
+        font-size: 20px;
+
+    }
+    /*skillspage*/
+    #skillsPage .div2 p{
+        font-size: 20px;
+    }   
+    /*contactpage*/
+    .form-wrapper{
+        margin-top: 20%;
+        width: 320px;
+        height: 400px;
+    }
+    #contactPage .div2 img{
+        margin-top: 10%;
+        height: 100px;
+        width: 100px;
+    }
+    #contactPage .div2 img:hover{
+        height: 100px;
+        width: 100px;
+    }
+    /*works page*/
+    .worksDiv h1{
+        font-size: 15px;
+    }
+    .worksDiv img{
+        width: 280px;
+        height: 151px;
+    } 
+    .work1{
+        margin-top: 20%;
+    }
+    /*attribution page*/
+    #attributionsPage ul{
+        padding: 10px;
+        font-size: 18px;
+    }
+    #attributionsPage .div1{
+        margin-top: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage .div2{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #attributionsPage img{
+        width: 40px;
+        height: 40px;
+    }
+    /*dice page*/
+    #dicePage h1{
+        font-size: 30px;
+    }
+    #dicePage p{
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .dice-tile{
+        width: 300px;
+        height: 300px;
+    }
+    .dice-imgs img{
+        width: 45%;
+    }
+    .diceDiv button{
+        width: 25%;
+        height: 40px;
+        font-size: 15px;
+    }   
+}
+@media (max-width: 320px){
+    /*homepage*/
+    #homePage .logo{
+        margin-top: 20%;
+        height: 250px;
+        width: 250px;
+    }    
+    /*skillspage*/
+    #skillsPage .div2 p{
+        font-size: 25px;
+    }
+    #skillsPage .div1 img{
+        margin-top: 20%;
+        height: 250px;
+        width: 250px;
+    }  
+    /*contactpage*/
+    .form-wrapper{
+        margin-top: 20%;
+        width: 300px;
+        height: 400px;
+    }
+    #contactPage .div2 img{
+        margin-top: 10%;
+        height: 100px;
+        width: 100px;
+    }
 }

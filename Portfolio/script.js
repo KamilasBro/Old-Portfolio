@@ -1,3 +1,30 @@
+//loading screen
+{
+function loadingDisplay1()
+{
+    document.querySelector(".navbar").style.display="none";
+    document.querySelector(".main").style.display="none";
+    document.querySelector(".navbar").style.opacity="0"
+    document.querySelector(".main").style.opacity="0"
+    document.querySelector(".loadingContainer").style.display="flex";
+    setTimeout(loadingDisplay2,1100);
+    function loadingDisplay2()
+    {
+        document.querySelector(".loadingContainer").style.display="none";
+        document.querySelector(".navbar").style.display="flex";
+        document.querySelector(".main").style.display="block";
+        setTimeout(loadingRepair,1);
+    function loadingRepair()
+    {
+        document.querySelector(".navbar").style.opacity="1"
+        document.querySelector(".main").style.opacity="1"
+    }
+    }
+}
+$(window).on("load",function(){
+    loadingDisplay1();
+});
+}
 //navigation
 {
 const home=document.getElementById("home");
@@ -9,27 +36,33 @@ const attributions=document.getElementById("attributions");
 var diceDisplay=false, navButton;
 home.addEventListener("click",e=>{
     navButton=1;
-    diceAppear();
+    loadingDisplay1();
+    setTimeout(diceAppear,1100);
 });
 about.addEventListener("click",e=>{
     navButton=2;
-    diceAppear();
+    loadingDisplay1();
+    setTimeout(diceAppear,1100);
 });
 skills.addEventListener("click",e=>{
     navButton=3;
-    diceAppear();
+    loadingDisplay1();
+    setTimeout(diceAppear,1100);
 });
 contact.addEventListener("click",e=>{
     navButton=4;
-    diceAppear();
+    loadingDisplay1();
+    setTimeout(diceAppear,1100);
 });
 works.addEventListener("click",e=>{
     navButton=5;
-    diceAppear();
+    loadingDisplay1();
+    setTimeout(diceAppear,1100);
 });
 attributions.addEventListener("click",e=>{
     navButton=6;
-    diceAppear();
+    loadingDisplay1();
+    setTimeout(diceAppear,1100);
 });
 }
 //dice showing up
@@ -81,7 +114,7 @@ function diceAppear()
                 document.getElementById("worksPage").style.display="none";
                 document.getElementById("attributionsPage").style.display="none";
                 document.getElementById("dicePage").style.display="none";
-                document.getElementById("navbar").style.display="block";
+                document.getElementById("navbar").style.display="flex";
             break;
             case 2:
                 document.getElementById("homePage").style.display="none";
@@ -91,7 +124,7 @@ function diceAppear()
                 document.getElementById("worksPage").style.display="none";
                 document.getElementById("attributionsPage").style.display="none";
                 document.getElementById("dicePage").style.display="none";
-                document.getElementById("navbar").style.display="block";
+                document.getElementById("navbar").style.display="flex";
             break;
             case 3:
                 document.getElementById("homePage").style.display="none";
@@ -101,7 +134,7 @@ function diceAppear()
                 document.getElementById("worksPage").style.display="none";
                 document.getElementById("attributionsPage").style.display="none";
                 document.getElementById("dicePage").style.display="none";
-                document.getElementById("navbar").style.display="block";
+                document.getElementById("navbar").style.display="flex";
             break;
             case 4:
                 document.getElementById("homePage").style.display="none";
@@ -111,7 +144,7 @@ function diceAppear()
                 document.getElementById("worksPage").style.display="none";
                 document.getElementById("attributionsPage").style.display="none";
                 document.getElementById("dicePage").style.display="none";
-                document.getElementById("navbar").style.display="block";
+                document.getElementById("navbar").style.display="flex";
             break;
             case 5:
                 document.getElementById("homePage").style.display="none";
@@ -121,7 +154,7 @@ function diceAppear()
                 document.getElementById("worksPage").style.display="block";
                 document.getElementById("attributionsPage").style.display="none";
                 document.getElementById("dicePage").style.display="none";
-                document.getElementById("navbar").style.display="block";
+                document.getElementById("navbar").style.display="flex";
             break;
             case 6:
                 document.getElementById("homePage").style.display="none";
@@ -131,7 +164,7 @@ function diceAppear()
                 document.getElementById("worksPage").style.display="none";
                 document.getElementById("attributionsPage").style.display="block";
                 document.getElementById("dicePage").style.display="none";
-                document.getElementById("navbar").style.display="block";
+                document.getElementById("navbar").style.display="flex";
             break;
         }
     }
@@ -175,7 +208,6 @@ rollButton.addEventListener("click",e=>{
         document.getElementById("button-wrap").style.opacity="1"
     }
     setTimeout(cubeRepair,1);
-    document.get
     switch(rollResult)
 {
     case 1:
@@ -219,8 +251,9 @@ rollButton.addEventListener("click",e=>{
             rollResultText=" ??? ";
         break;
     }
+    document.getElementById("button-wrap").style.animation="kurwaJebanaKostka 2s ease-in-out";
     document.getElementById("button-wrap").innerHTML="<p>You hit "+rollResult+"! "+rollResultText+"</p>";
-    setTimeout(diceAppear,4000)
+    setTimeout(diceAppear,4000);
 });
 skipButton.addEventListener("click",e=>{
     document.getElementById("diceImg").style.animation="rotating 1s ease-in-out";
@@ -245,6 +278,10 @@ github.addEventListener("click",e=>{
     const d2calc=document.getElementById("d2calc");
     d2calc.addEventListener("click",e=>{
         window.open("https://diablo2resurrectedcalculator.netlify.app/", "_blank");
+    });
+    const SPG=document.getElementById("SPG");
+    SPG.addEventListener("click",e=>{
+        window.open("https://simplepasswordgeneratorspg.netlify.app/", "_blank");
     });
 }
 //rolls
@@ -276,8 +313,6 @@ function roll3()
     document.querySelector(".textDiv p").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#homePage .mainCodingDec1").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#homePage .mainCodingDec2").style.animation="roll3 8s ease-in-out infinite";
-    document.querySelector(".logoCodingDec1").style.animation="roll3 8s ease-in-out infinite";
-    document.querySelector(".logoCodingDec2").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#homePage .mainCodingDec3").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#homePage .mainCodingDec4").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#homePage .textCodingDec1").style.animation="roll3 8s ease-in-out infinite";
@@ -292,8 +327,6 @@ function roll3()
     document.querySelector(".div2 p").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#aboutPage .mainCodingDec1").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#aboutPage .mainCodingDec2").style.animation="roll3 8s ease-in-out infinite";
-    document.querySelector("#aboutPage .imgCodingDec1").style.animation="roll3 8s ease-in-out infinite";
-    document.querySelector("#aboutPage .imgCodingDec2").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#aboutPage .mainCodingDec3").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#aboutPage .mainCodingDec4").style.animation="roll3 8s ease-in-out infinite";
     document.querySelector("#aboutPage .textCodingDec3").style.animation="roll3 8s ease-in-out infinite";
@@ -304,8 +337,6 @@ function roll3()
         document.querySelector("#skillsPage #pageTitle").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#skillsPage .mainCodingDec1").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#skillsPage .mainCodingDec2").style.animation="roll3 8s ease-in-out infinite";
-        document.querySelector("#skillsPage .imgCodingDec1").style.animation="roll3 8s ease-in-out infinite";
-        document.querySelector("#skillsPage .imgCodingDec2").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#skillsPage .mainCodingDec3").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#skillsPage .mainCodingDec4").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#skillsPage .textCodingDec3").style.animation="roll3 8s ease-in-out infinite";
@@ -316,10 +347,6 @@ function roll3()
         document.querySelector("#contactPage #pageTitle").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#contactPage .mainCodingDec1").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#contactPage .mainCodingDec2").style.animation="roll3 8s ease-in-out infinite";
-        document.querySelector("#contactPage .imgCodingDec1").style.animation="roll3 8s ease-in-out infinite";
-        document.querySelector("#contactPage .imgCodingDec2").style.animation="roll3 8s ease-in-out infinite";
-        document.querySelector("#contactPage .imgCodingDec3").style.animation="roll3 8s ease-in-out infinite";
-        document.querySelector("#contactPage .imgCodingDec4").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#contactPage .mainCodingDec3").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector("#contactPage .mainCodingDec4").style.animation="roll3 8s ease-in-out infinite";
         document.querySelector(".form-wrapper h1").style.animation="roll3 8s ease-in-out infinite";

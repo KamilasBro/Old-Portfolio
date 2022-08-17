@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="images/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Neonderthaw&family=Pacifico&display=swap" rel="stylesheet">
@@ -9,6 +11,9 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Kamil's Portfolio Webpage">
+    <meta name="keywords" content="Kamilas, Kamil's Portfolio">
+    <meta name="author" content="Kamilas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamil's Portfolio</title>
 </head>
@@ -19,9 +24,7 @@
         <div class="diceDiv">
             <div class="dice-tile" id="siema">
                 <p>The website will change based on roll result</p>
-                <div class="dice-imgs" id="dice-imgs">
-                    
-                </div>
+                <div class="dice-imgs" id="dice-imgs"></div>
                 <div class="button-wrap" id="button-wrap"><button id="rollButton">ROLL !</button><button id="skip">SKIP</button></div>
             </div>
         </div>
@@ -34,9 +37,7 @@
             <span class="mainCodingDec2">< body></span>
             <div class="sector1">
                 <div class="logoDiv">
-                    <span class="logoCodingDec1">< img></span>
-                    <img class="logo" src="Images/placeholder.png" alt="LogoImage" id="logo">
-                    <span class="logoCodingDec2">< /img></span>
+                    <img class="logo" src="Images/Logo.png" alt="LogoImage" id="logo">
                 </div>
                 <div class="textDiv">
                     <div>
@@ -72,9 +73,7 @@
                     </div>
                 </div>
                 <div class="div2">
-                    <span class="imgCodingDec1">< img></span>
                     <img id="aboutPageImg" src="Images/aboutImg.png" alt="">
-                    <span class="imgCodingDec2">< /img></span>
                     <div id="clue2">3</div>
                 </div>
             </div>
@@ -88,9 +87,7 @@
             <span class="mainCodingDec2">< body></span>
             <div class="sector1">
                 <div class="div1">
-                    <span class="imgCodingDec1">< img></span>
                     <img src="Images/codingLangImg.png" alt="" id="skillsImg">
-                    <span class="imgCodingDec2">< /img></span>
                 </div>
                 <div class="div2">
                     <div>
@@ -114,7 +111,6 @@
             <span class="mainCodingDec2">< body></span>
             <div class="sector1">
                 <div class="div1">
-                    <span class="imgCodingDec1">< form></span>
                     <div class="form-wrapper">
                         <h1>Send Me Mail!</h1>
                         <form action="https://formsubmit.co/761bf3ecce969402ac00ea3e1ed80978" method="post">
@@ -137,13 +133,10 @@
                             </div>
                         </form>
                     </div>
-                    <span class="imgCodingDec2">< /form></span>
                 </div>
                 <div class="div2">
-                    <span class="imgCodingDec3">< img></span>
                     <img src="Images/linkedin.png" alt="" id="linkedinButton">
                     <img src="Images/github.png" alt="" id="githubButton">
-                    <span class="imgCodingDec4">< /img></span>
                 </div>
             </div>
             <span class="mainCodingDec3">< /body></span>
@@ -160,8 +153,8 @@
                         <img src="Images/d2calc.jpg" alt="" id="d2calc">
                     </div>
                     <div class="work2">
-                        <h1>Coming Soon</h1>
-                        <img src="Images/placeholder.png" alt="">
+                        <h1>Simple Password Generator</h1>
+                        <img src="Images/SPG.png" alt="" id="SPG">
                     </div>
                 </div>
                 <div class="worksDiv">
@@ -310,6 +303,16 @@
             </div>
         </div>
         <div id="clue3">4</div>
+    </div>
+    <div class="loadingContainer">
+        <div class="loadingText">
+            <h1>Website is loading.</h1>
+        </div>
+        <div class="loading">
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

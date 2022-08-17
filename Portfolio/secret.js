@@ -18,3 +18,4 @@ codeButton.addEventListener("click",e=>{
         window.location.replace('home.html');
     }
 });
+const zul=document.getElementById("zul");

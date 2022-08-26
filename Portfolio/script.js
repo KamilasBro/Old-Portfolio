@@ -283,6 +283,10 @@ github.addEventListener("click",e=>{
     SPG.addEventListener("click",e=>{
         window.open("https://simplepasswordgeneratorspg.netlify.app/", "_blank");
     });
+    const lukigame=document.getElementById("lukigame");
+    lukigame.addEventListener("click",e=>{
+        window.open("https://lukibrickgamealfa.netlify.app/", "_blank");
+    });
 }
 //rolls
 {

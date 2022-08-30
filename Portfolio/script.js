@@ -287,6 +287,10 @@ github.addEventListener("click",e=>{
     lukigame.addEventListener("click",e=>{
         window.open("https://lukibrickgamealfa.netlify.app/", "_blank");
     });
+    const lukiOOOO=document.getElementById("lukiOOOO");
+    lukiOOOO.addEventListener("click",e=>{
+        window.open("https://iflukihitthecorner.netlify.app/", "_blank");
+    });
 }
 //rolls
 {
@@ -308,7 +312,7 @@ function roll3()
 {
     //navbar
     {
-        document.getElementById("navbar").style.animation="roll3boxshadow 8s infinite ease-in-out alternate"
+        document.getElementById("navbar").style.animation="roll3boxshadow 8s infinite ease-in-out"
     }
     //homePage
     {

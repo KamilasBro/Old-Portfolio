@@ -865,6 +865,9 @@ body::-webkit-scrollbar-thumb{
     .navbar img{
         padding: 15px;
     }
+    .navbar-tile:hover{
+        background-color: rgb(31, 31, 31);
+    }
     /*homepage*/
     #homePage .sector1{
         display: block;
@@ -1428,7 +1431,7 @@ body::-webkit-scrollbar-thumb{
     /*navbar*/
     .navbar-tile{
         width: 50px;
-        margin-inline: 0px;
+        margin-inline: 1.5px;
     }
     .navbar img{
         padding: 15px;
@@ -1523,6 +1526,11 @@ body::-webkit-scrollbar-thumb{
     }   
 }
 @media (max-width: 320px){
+    /*navbar*/
+    .navbar-tile{
+        width: 50px;
+        margin-inline: 0px;
+    }
     /*homepage*/
     #homePage .logo{
         margin-top: 20%;

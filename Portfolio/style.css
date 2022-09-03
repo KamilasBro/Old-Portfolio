@@ -453,7 +453,7 @@ body::-webkit-scrollbar-thumb{
 }
 #skillsPage .div2 p{
     color: white;
-    font-size: 40px;
+    font-size: 34px;
     margin-left: 60px;
 }
 /*contact page*/
@@ -760,7 +760,16 @@ body::-webkit-scrollbar-thumb{
     border: 2px solid #ff4da6;
 }
 /* media queries */
+@media (max-width: 1700px){
+    #skillsPage .div2 p{
+        font-size: 31px;
+    }
+}
 @media (max-width: 1600px){
+/*skills page*/
+#skillsPage .div2 p{
+    font-size: 30px;
+}
 /*attribution page*/
 #attributionsPage .sector1{
     display: block;
@@ -797,7 +806,7 @@ body::-webkit-scrollbar-thumb{
     }
     /*skillspage*/
     #skillsPage .div2 p{
-        font-size: 35px;
+        font-size: 27px;
     }
     /*contactpage*/
     .form-wrapper{
@@ -1114,6 +1123,9 @@ body::-webkit-scrollbar-thumb{
         height: 450px;
         width: 450px;
     }
+    #skillsPage .div2 p{
+        font-size: 27px;
+    }
     /*contact page*/
     #contactPage .sector1{
         display: block;
@@ -1213,6 +1225,10 @@ body::-webkit-scrollbar-thumb{
     }
     .mainCodingDec4{
         display: none;
+    }
+    /*skillspage*/
+    #skillsPage .div2 p{
+        font-size: 24px;
     }
     /*contactpage*/
     .form-wrapper{
@@ -1337,7 +1353,7 @@ body::-webkit-scrollbar-thumb{
     }
     /*skillspage*/
     #skillsPage .div2 p{
-        font-size: 25px;
+        font-size: 20px;
     }
     #skillsPage .div1 img{
         height: 300px;
@@ -1460,7 +1476,7 @@ body::-webkit-scrollbar-thumb{
     }
     /*skillspage*/
     #skillsPage .div2 p{
-        font-size: 20px;
+        font-size: 18px;
     }   
     /*contactpage*/
     .form-wrapper{
@@ -1554,7 +1570,7 @@ body::-webkit-scrollbar-thumb{
     }    
     /*skillspage*/
     #skillsPage .div2 p{
-        font-size: 25px;
+        font-size: 17px;
     }
     #skillsPage .div1 img{
         margin-top: 20%;

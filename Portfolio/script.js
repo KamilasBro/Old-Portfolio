@@ -267,7 +267,7 @@ const linkedin=document.getElementById("linkedinButton");
 const github=document.getElementById("githubButton");
 
 linkedin.addEventListener("click",e=>{
-    window.open("https://www.linkedin.com/in/kamil-wr%C3%B3bel-35b559230/'", "_blank");
+    window.open("https://www.linkedin.com/in/kamil-wr%C3%B3bel-35b559230/", "_blank");
 });
 github.addEventListener("click",e=>{
     window.open("https://github.com/KamilasBro", "_blank");

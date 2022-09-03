@@ -329,6 +329,7 @@ body::-webkit-scrollbar-thumb{
 }
 .navbar-tile:hover{
     background-color: black;
+    transition: 300ms;
 }
 .navbar img{
     padding: 15px;
@@ -1055,14 +1056,14 @@ body::-webkit-scrollbar-thumb{
         font-size: 70px;
     }
     .secretRoom input{
-        width: 100%;
-        height: 300px;
+        width: 70vw;
+        height: 250px;
         font-size: 150px;
     }
     .secretRoom button{
-        width: 70%;
-        height: 200px;
-        font-size: 100px;
+        width: 50%;
+        height: 180px;
+        font-size: 80px;
     }
     /*Loading screen*/
     .loading .line-box{
@@ -1256,14 +1257,11 @@ body::-webkit-scrollbar-thumb{
         font-size: 50px;
     }
     .secretRoom input{
-        width: 100%;
-        height: 300px;
-        font-size: 140px;
+        font-size: 120px;
     }
     .secretRoom button{
-        width: 100%;
-        height: 200px;
-        font-size: 90px;
+        font-size: 50px;
+        height: 150px;
     }     
     /*dice page*/
     #dicePage h1{
@@ -1417,15 +1415,25 @@ body::-webkit-scrollbar-thumb{
         font-size: 40px;
     }
     .secretRoom input{
-        width: 100%;
-        height: 300px;
         font-size: 100px;
+        height: 200px;    
     }
     .secretRoom button{
-        width: 100%;
-        height: 200px;
-        font-size: 80px;
-    } 
+        font-size: 40px;
+        height: 100px;
+    }
+    #zul{
+        margin-top: 1vh;
+        width: 320px;
+        height: 220px;
+        border: none;
+    }
+    .tf{
+        width: 50vw;
+        height: 40vw;
+        position: absolute;
+        animation: tfanim 3s infinite ease-in-out alternate;
+    }
 }
 @media (max-width: 375px){
     /*navbar*/
@@ -1524,6 +1532,13 @@ body::-webkit-scrollbar-thumb{
         height: 40px;
         font-size: 15px;
     }   
+    /* secret room */
+    .secretRoom input{
+        font-size: 80px;
+    }
+    .secretRoom button{
+        font-size: 30px;
+    } 
 }
 @media (max-width: 320px){
     /*navbar*/

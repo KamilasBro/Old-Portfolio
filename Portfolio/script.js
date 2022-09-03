@@ -291,6 +291,10 @@ github.addEventListener("click",e=>{
     lukiOOOO.addEventListener("click",e=>{
         window.open("https://iflukihitthecorner.netlify.app/", "_blank");
     });
+    const samplesite=document.getElementById("samplesite");
+    samplesite.addEventListener("click",e=>{
+        window.open("https://samplewebsiteessa.netlify.app/", "_blank");
+    });
 }
 //rolls
 {

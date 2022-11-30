@@ -295,6 +295,14 @@ github.addEventListener("click",e=>{
     samplesite.addEventListener("click",e=>{
         window.open("https://samplewebsiteessa.netlify.app/", "_blank");
     });
+    const officeowo=document.getElementById("officeowo");
+    officeowo.addEventListener("click",e=>{
+        window.open("https://officeowo.pl/", "_blank");
+    });
+    const loginsim=document.getElementById("loginsim");
+    loginsim.addEventListener("click",e=>{
+        window.open("https://loginsimulator.netlify.app/", "_blank");
+    });
 }
 //rolls
 {

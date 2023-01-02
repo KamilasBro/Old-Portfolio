@@ -275,6 +275,10 @@ github.addEventListener("click",e=>{
 }
 //works page
 {
+    const underbeer=document.getElementById("underbeer");
+    underbeer.addEventListener("click",e=>{
+        window.open("https://underbeer.netlify.app/", "_blank");
+    });
     const d2calc=document.getElementById("d2calc");
     d2calc.addEventListener("click",e=>{
         window.open("https://diablo2resurrectedcalculator.netlify.app/", "_blank");

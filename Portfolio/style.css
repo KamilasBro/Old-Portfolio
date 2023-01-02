@@ -189,7 +189,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
 }
 .loadingText{
     color: rgb(255, 47, 144);

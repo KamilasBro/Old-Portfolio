@@ -307,6 +307,10 @@ github.addEventListener("click",e=>{
     loginsim.addEventListener("click",e=>{
         window.open("https://loginsimulator.netlify.app/", "_blank");
     });
+    const tenzies=document.getElementById("tenzies");
+    tenzies.addEventListener("click",e=>{
+        window.open("https://tenziesgiera.netlify.app/", "_blank");
+    });
 }
 //rolls
 {

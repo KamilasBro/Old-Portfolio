@@ -276,40 +276,44 @@ github.addEventListener("click",e=>{
 //works page
 {
     const underbeer=document.getElementById("underbeer");
-    underbeer.addEventListener("click",e=>{
+    underbeer.addEventListener("click",()=>{
         window.open("https://underbeer.netlify.app/", "_blank");
     });
     const d2calc=document.getElementById("d2calc");
-    d2calc.addEventListener("click",e=>{
+    d2calc.addEventListener("click",()=>{
         window.open("https://diablo2resurrectedcalculator.netlify.app/", "_blank");
     });
     const SPG=document.getElementById("SPG");
-    SPG.addEventListener("click",e=>{
+    SPG.addEventListener("click",()=>{
         window.open("https://simplepasswordgeneratorspg.netlify.app/", "_blank");
     });
     const lukigame=document.getElementById("lukigame");
-    lukigame.addEventListener("click",e=>{
+    lukigame.addEventListener("click",()=>{
         window.open("https://lukibrickgamealfa.netlify.app/", "_blank");
     });
     const lukiOOOO=document.getElementById("lukiOOOO");
-    lukiOOOO.addEventListener("click",e=>{
+    lukiOOOO.addEventListener("click",()=>{
         window.open("https://iflukihitthecorner.netlify.app/", "_blank");
     });
     const samplesite=document.getElementById("samplesite");
-    samplesite.addEventListener("click",e=>{
+    samplesite.addEventListener("click",()=>{
         window.open("https://samplewebsiteessa.netlify.app/", "_blank");
     });
     const officeowo=document.getElementById("officeowo");
-    officeowo.addEventListener("click",e=>{
+    officeowo.addEventListener("click",()=>{
         window.open("https://officeowo.pl/", "_blank");
     });
     const loginsim=document.getElementById("loginsim");
-    loginsim.addEventListener("click",e=>{
+    loginsim.addEventListener("click",()=>{
         window.open("https://loginsimulator.netlify.app/", "_blank");
     });
     const tenzies=document.getElementById("tenzies");
-    tenzies.addEventListener("click",e=>{
+    tenzies.addEventListener("click",()=>{
         window.open("https://tenziesgiera.netlify.app/", "_blank");
+    });
+    const quizzical=document.getElementById("quizzical");
+    quizzical.addEventListener("click",()=>{
+        window.open("https://quizzicalbysiemaindustries.netlify.app/", "_blank");
     });
 }
 //rolls

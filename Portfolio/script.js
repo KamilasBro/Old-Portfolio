@@ -315,6 +315,10 @@ github.addEventListener("click",e=>{
     quizzical.addEventListener("click",()=>{
         window.open("https://quizzicalbysiemaindustries.netlify.app/", "_blank");
     });
+    const spotify=document.getElementById("spotify");
+    spotify.addEventListener("click",()=>{
+        window.open("https://spotify-playlist-preview.netlify.app/", "_blank");
+    });
 }
 //rolls
 {

@@ -16,3 +16,5 @@ On some sections of the page the hints will be rendered as password keys each. T
 You will be redirected to secret.html page with input to enter the password
 #
 if the password is correct you will see the secret :)
+# Preview
+https://kamilsportfolio-old.netlify.app/

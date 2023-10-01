@@ -1,5 +1,5 @@
 # About
-This is my first portfolio (here is current one https://kamilas.netlify.app/) writed in vanilla JavaScript
+This is my first portfolio writed in vanilla JavaScript (here is current one https://kamilas.netlify.app/).
 # Features
 It have dice rolls builded in that will determine what should happen on the page and also working form.
 # 1.
